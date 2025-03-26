@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6v2ZkA6XjftgDHA7PpUt8mo/70n07AzTUl2BswfGth5ACReyopwVn0pWm0" crossorigin="anonymous">
+    <style>
+        
+        .month-table {
+            margin-bottom: 20px;
+        }
+        .month-name {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            color: rgb(247, 150, 72);
+        }
+        .day-name {
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+        .day-cell {
+            text-align: center;
+            vertical-align: middle;
+            height: 50px;
+            width: 50px;
+            color: white;
+        }
+  
+        @media (max-width: 767px) {
+            .day-cell {
+                height: 40px;
+                width: 40px;
+            }
+        }
+        @media (max-width: 575px) {
+            .day-cell {
+                height: 30px;
+                width: 30px;
+            }
+        }
+        .calendar-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .month-table {
+            margin: 10px;
+            max-width: 100%;
+        }
+        .month-table td {
+            padding: 0;
+        }
+        .day-name.red {
+    color: red;
+}
+body{
+    background-image: url(https://img.freepik.com/free-vector/paper-style-wavy-background_23-2149113696.jpg?t=st=1743002602~exp=1743006202~hmac=7c1d4454c148456c662f504652323e29265574e7ffe5b9b2d2fc8baf95a5a87e&w=996);
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="calendar-container">
+            <!-- January -->
+            <div class="month-table">
+                <div class="month-name">January</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="day-name red">Sun</th>
+                            <th class="day-name">Mon</th>
+                            <th class="day-name">Tue</th>
+                            <th class="day-name">Wed</th>
+                            <th class="day-name">Thu</th>
+                            <th class="day-name">Fri</th>
+                            <th class="day-name red">Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day-cell"></td>
+                            <td class="day-cell">1</td>
+                            <td class="day-cell">2</td>
+                            <td class="day-cell">3</td>
+                            <td class="day-cell">4</td>
+                            <td class="day-cell">5</td>
+                            <td class="day-cell">6</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">7</td>
+                            <td class="day-cell">8</td>
+                            <td class="day-cell">9</td>
+                            <td class="day-cell">10</td>
+                            <td class="day-cell">11</td>
+                            <td class="day-cell">12</td>
+                            <td class="day-cell">13</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">14</td>
+                            <td class="day-cell">15</td>
+                            <td class="day-cell">16</td>
+                            <td class="day-cell">17</td>
+                            <td class="day-cell">18</td>
+                            <td class="day-cell">19</td>
+                            <td class="day-cell">20</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">21</td>
+                            <td class="day-cell">22</td>
+                            <td class="day-cell">23</td>
+                            <td class="day-cell">24</td>
+                            <td class="day-cell">25</td>
+                            <td class="day-cell">26</td>
+                            <td class="day-cell">27</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">28</td>
+                            <td class="day-cell">29</td>
+                            <td class="day-cell">30</td>
+                            <td class="day-cell">31</td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- February -->
+            <div class="month-table">
+                <div class="month-name">February</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="day-name red">Sun</th>
+                            <th class="day-name">Mon</th>
+                            <th class="day-name">Tue</th>
+                            <th class="day-name">Wed</th>
+                            <th class="day-name">Thu</th>
+                            <th class="day-name">Fri</th>
+                            <th class="day-name red">Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day-cell"></td>
+                            <td class="day-cell">1</td>
+                            <td class="day-cell">2</td>
+                            <td class="day-cell">3</td>
+                            <td class="day-cell">4</td>
+                            <td class="day-cell">5</td>
+                            <td class="day-cell">6</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">7</td>
+                            <td class="day-cell">8</td>
+                            <td class="day-cell">9</td>
+                            <td class="day-cell">10</td>
+                            <td class="day-cell">11</td>
+                            <td class="day-cell">12</td>
+                            <td class="day-cell">13</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">14</td>
+                            <td class="day-cell">15</td>
+                            <td class="day-cell">16</td>
+                            <td class="day-cell">17</td>
+                            <td class="day-cell">18</td>
+                            <td class="day-cell">19</td>
+                            <td class="day-cell">20</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">21</td>
+                            <td class="day-cell">22</td>
+                            <td class="day-cell">23</td>
+                            <td class="day-cell">24</td>
+                            <td class="day-cell">25</td>
+                            <td class="day-cell">26</td>
+                            <td class="day-cell">27</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">28</td>
+                            <td class="day-cell">29</td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- March -->
+            <div class="month-table">
+                <div class="month-name">March</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="day-name red">Sun</th>
+                            <th class="day-name">Mon</th>
+                            <th class="day-name">Tue</th>
+                            <th class="day-name">Wed</th>
+                            <th class="day-name">Thu</th>
+                            <th class="day-name">Fri</th>
+                            <th class="day-name red">Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day-cell"></td>
+                            <td class="day-cell">1</td>
+                            <td class="day-cell">2</td>
+                            <td class="day-cell">3</td>
+                            <td class="day-cell">4</td>
+                            <td class="day-cell">5</td>
+                            <td class="day-cell">6</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">7</td>
+                            <td class="day-cell">8</td>
+                            <td class="day-cell">9</td>
+                            <td class="day-cell">10</td>
+                            <td class="day-cell">11</td>
+                            <td class="day-cell">12</td>
+                            <td class="day-cell">13</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">14</td>
+                            <td class="day-cell">15</td>
+                            <td class="day-cell">16</td>
+                            <td class="day-cell">17</td>
+                            <td class="day-cell">18</td>
+                            <td class="day-cell">19</td>
+                            <td class="day-cell">20</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">21</td>
+                            <td class="day-cell">22</td>
+                            <td class="day-cell">23</td>
+                            <td class="day-cell">24</td>
+                            <td class="day-cell">25</td>
+                            <td class="day-cell">26</td>
+                            <td class="day-cell">27</td>
+                        </tr>
+                        <tr>
+                            <td class="day-cell">28</td>
+                            <td class="day-cell">29</td>
+                            <td class="day-cell">30</td>
+                            <td class="day-cell">31</td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                            <td class="day-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+                <!-- April -->
+    <div class="month-table">
+        <div class="month-name">April</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- May -->
+    <div class="month-table">
+        <div class="month-name">May</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell">31</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- June -->
+    <div class="month-table">
+        <div class="month-name">June</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- July -->
+    <div class="month-table">
+        <div class="month-name">July</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell">31</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- August -->
+    <div class="month-table">
+        <div class="month-name">August</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell">31</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- September -->
+    <div class="month-table">
+        <div class="month-name">September</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- October -->
+    <div class="month-table">
+        <div class="month-name">October</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell">31</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- November -->
+    <div class="month-table">
+        <div class="month-name">November</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- December -->
+    <div class="month-table">
+        <div class="month-name">December</div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="day-name red">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name red">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-cell"></td>
+                    <td class="day-cell">1</td>
+                    <td class="day-cell">2</td>
+                    <td class="day-cell">3</td>
+                    <td class="day-cell">4</td>
+                    <td class="day-cell">5</td>
+                    <td class="day-cell">6</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">7</td>
+                    <td class="day-cell">8</td>
+                    <td class="day-cell">9</td>
+                    <td class="day-cell">10</td>
+                    <td class="day-cell">11</td>
+                    <td class="day-cell">12</td>
+                    <td class="day-cell">13</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">14</td>
+                    <td class="day-cell">15</td>
+                    <td class="day-cell">16</td>
+                    <td class="day-cell">17</td>
+                    <td class="day-cell">18</td>
+                    <td class="day-cell">19</td>
+                    <td class="day-cell">20</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">21</td>
+                    <td class="day-cell">22</td>
+                    <td class="day-cell">23</td>
+                    <td class="day-cell">24</td>
+                    <td class="day-cell">25</td>
+                    <td class="day-cell">26</td>
+                    <td class="day-cell">27</td>
+                </tr>
+                <tr>
+                    <td class="day-cell">28</td>
+                    <td class="day-cell">29</td>
+                    <td class="day-cell">30</td>
+                    <td class="day-cell">31</td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                    <td class="day-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+              </div>
+        
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0xS/vooR8dvvSJJawrtzAAo1y6Xz4KjvhrGhPZqzP2NOhsFg" crossorigin="anonymous"></script>
+</body>
+</html>
