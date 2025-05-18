@@ -9,15 +9,23 @@
 <body>
 
   <header>
-    <div class="logo">🐾 Meowstore</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="contact">
-      <a href="tel:+639468547465">📞 (63) 946 8547 465</a>
+    <div class="header-inner">
+      <div class="logo">🐾 Meowstore</div>
+
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="contact">
+        <a href="tel:+639468547465">📞 (63) 946 8547 465</a>
+      </div>
     </div>
   </header>
 
@@ -45,6 +53,15 @@
       <p>Whether you’re a dog devotee, cat cuddler, or exotic pet enthusiast, we’ve got everything to keep tails wagging and whiskers twitching.</p>
     </div>
   </section>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
