@@ -1,0 +1,85 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  margin: 2rem;
+  color: #222;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+header a {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  padding: 10px 16px;
+  background: #f1bea0;
+  color: #292929;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 999;
+  transition: background 0.2s ease;
+}
+
+header a:hover {
+  background: #f1bea0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section.holiday {
+  background: #f1bea0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 180px;
+  height: 180px;
+  padding: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.4s ease 0.5s, height 0.4s ease 0.5s, box-shadow 0.3s ease 0.5s;
+}
+
+section.holiday h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #1a1919;
+  flex-shrink: 0;
+}
+
+section.holiday p {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #1f1e1e;
+  opacity: 0;
+  overflow: hidden;
+  flex-grow: 1;
+  transition: opacity 0.3s ease 0.5s;
+}
+
+section.holiday:hover {
+  width: 320px;
+  height: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  transition-delay: 0s;
+}
+
+section.holiday:hover p {
+  opacity: 1;
+  overflow: visible;
+  margin-top: 0.7rem;
+  transition-delay: 0.5s;
+}

@@ -1,0 +1,95 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  margin: 20px;
+  text-align: center;
+}
+
+a {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 14px;
+  padding: 10px 16px;
+  background: #f1bea0;
+  color: #292929;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 999;
+  transition: background 0.2s ease;
+}
+
+a:hover {
+  background: #d0d0d0;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #111;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.month {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 270px;
+  padding: 15px 10px 20px;
+}
+
+.month h2 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #222;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 8px 0;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  vertical-align: middle;
+  user-select: none;
+  color: #444;
+}
+
+th {
+  background: #f1bea0;
+  font-weight: 600;
+  color: #292929;
+}
+
+td {
+  cursor: default;
+  background: #fff;
+}
+
+td .holiday {
+  color: #d32f2f;
+  font-weight: 600;
+  margin-left: 4px;
+  user-select: none;
+}
+
+td span.holiday {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  font-size: 13px;
+  color: #d32f2f;
+  user-select: none;
+}
