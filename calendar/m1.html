@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="holicss.css" />
 </head>
 <body>
-
+<div class="wrapper">
+  <div class="main-container">
 <header>
   <h1>Labor Day</h1>
   <p><strong>Date:</strong> May 1 (Mon)</p>
@@ -17,6 +18,21 @@
   <p>New Year’s Day marks the beginning of the calendar year and is widely celebrated throughout the Philippines. It is a time filled with hope, new resolutions, and festive gatherings as families and communities welcome a fresh start.</p>
   <p><a href="holidays.html">Back to Holidays List</a></p>
 </main>
+ <button id="toggle-btn">›</button>
+  </div>
 
+  <div id="image-container">
+    <img src="m1.jpg" alt="Holiday Image"> 
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-btn');
+  const imageContainer = document.getElementById('image-container');
+
+  toggleBtn.addEventListener('click', () => {
+    imageContainer.classList.toggle('visible');
+  });
+</script>
 </body>
 </html>

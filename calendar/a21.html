@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="holicss.css" />
 </head>
 <body>
-
+<div class="wrapper">
+  <div class="main-container">
 <header>
   <h1>Eid'l Fitr</h1>
   <p><strong>Date:</strong> April 21 (Fri)</p>
@@ -21,6 +22,21 @@ The holiday is marked by prayers, feasting, charity to the poor (zakat), and com
 </p>
   <p><a href="holidays.html">Back to Holidays List</a></p>
 </main>
+ <button id="toggle-btn">›</button>
+  </div>
 
+  <div id="image-container">
+    <img src="a21.jpg" alt="Holiday Image"> 
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-btn');
+  const imageContainer = document.getElementById('image-container');
+
+  toggleBtn.addEventListener('click', () => {
+    imageContainer.classList.toggle('visible');
+  });
+</script>
 </body>
 </html>

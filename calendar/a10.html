@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="holicss.css" />
 </head>
 <body>
-
+<div class="wrapper">
+  <div class="main-container">
 <header>
   <h1>Araw ng Kagitingan</h1>
   <p><strong>Date:</strong> April 10 (Mon)</p>
@@ -19,6 +20,21 @@
 The day is marked by ceremonies, wreath-laying events, and reflections on patriotism and sacrifice. It serves as a reminder of the resilience and heroism of those who fought for the country’s freedom.</p>
   <p><a href="holidays.html">Back to Holidays List</a></p>
 </main>
+ <button id="toggle-btn">›</button>
+  </div>
 
+  <div id="image-container">
+    <img src="a10.jpg" alt="Holiday Image"> 
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-btn');
+  const imageContainer = document.getElementById('image-container');
+
+  toggleBtn.addEventListener('click', () => {
+    imageContainer.classList.toggle('visible');
+  });
+</script>
 </body>
 </html>

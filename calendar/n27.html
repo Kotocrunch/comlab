@@ -8,17 +8,37 @@
 </head>
 <body>
 
-<header>
-  <h1>Bonifacio Day</h1>
-  <p><strong>Date:</strong> November 27 (Mon)</p>
-</header>
+<div class="wrapper">
+  <div class="main-container">
+    <header>
+      <h1>Bonifacio Day</h1>
+      <h4><strong>Date:</strong> November 27 (Mon)</h4>
+    </header>
 
-<main>
-  <p>Bonifacio Day celebrates the birth of Andrés Bonifacio, a key figure in the Philippine Revolution against Spanish colonial rule. Bonifacio is remembered as the “Father of the Philippine Revolution” and symbol of resistance.
+    <main>
+      <p>Bonifacio Day celebrates the birth of Andrés Bonifacio, a key figure in the Philippine Revolution against Spanish colonial rule. Bonifacio is remembered as the “Father of the Philippine Revolution” and a symbol of resistance.</p>
 
-The day features ceremonies, historical commemorations, and discussions about his role in shaping Philippine history and national identity.</p>
-  <p><a href="holidays.html">Back to Holidays List</a></p>
-</main>
+      <p>The day features ceremonies, historical commemorations, and discussions about his role in shaping Philippine history and national identity.</p>
+
+      <p><a href="holidays.html">← Back to Holidays List</a></p>
+    </main>
+
+    <button id="toggle-btn">›</button>
+  </div>
+
+  <div id="image-container">
+    <img src="n27.jpg" alt="Holiday Image">
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-btn');
+  const imageContainer = document.getElementById('image-container');
+
+  toggleBtn.addEventListener('click', () => {
+    imageContainer.classList.toggle('visible');
+  });
+</script>
 
 </body>
 </html>

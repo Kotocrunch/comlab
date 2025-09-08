@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="holicss.css" />
 </head>
 <body>
-
+<div class="wrapper">
+  <div class="main-container">
 <header>
   <h1>Independence Day</h1>
   <p><strong>Date:</strong> June 12 (Mon)</p>
@@ -19,6 +20,21 @@
 This day highlights Filipino pride, freedom, and the continuing efforts to uphold sovereignty and democracy.</p>
   <p><a href="holidays.html">Back to Holidays List</a></p>
 </main>
+ <button id="toggle-btn">›</button>
+  </div>
 
+  <div id="image-container">
+    <img src="jn12.jpg" alt="Holiday Image"> 
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-btn');
+  const imageContainer = document.getElementById('image-container');
+
+  toggleBtn.addEventListener('click', () => {
+    imageContainer.classList.toggle('visible');
+  });
+</script>
 </body>
 </html>

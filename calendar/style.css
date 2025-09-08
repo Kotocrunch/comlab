@@ -77,6 +77,10 @@ td {
   cursor: default;
   background: #fff;
 }
+.wk{
+  background: rgb(143, 139, 148);
+  color: #000000;
+}
 
 td .holiday {
   color: #d32f2f;

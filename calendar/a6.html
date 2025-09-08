@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="holicss.css" />
 </head>
 <body>
-
+<div class="wrapper">
+  <div class="main-container">
 <header>
   <h1>Maundy Thursday</h1>
   <p><strong>Date:</strong> April 6 (Thu)</p>
@@ -19,6 +20,22 @@
 It is a solemn day for reflection and preparation before Good Friday. Many Filipinos observe fasting or attend Masses to honor the passion and sacrifice of Christ.</p>
   <p><a href="holidays.html">Back to Holidays List</a></p>
 </main>
+ <button id="toggle-btn">›</button>
+  </div>
+
+  <div id="image-container">
+    <img src="a6.jpg" alt="Holiday Image"> 
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-btn');
+  const imageContainer = document.getElementById('image-container');
+
+  toggleBtn.addEventListener('click', () => {
+    imageContainer.classList.toggle('visible');
+  });
+</script>
 
 </body>
 </html>
