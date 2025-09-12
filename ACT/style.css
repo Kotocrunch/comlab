@@ -4,17 +4,32 @@ body {
   padding: 20px;
 }
 
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .layout {
   border: 2px solid black;
   width: 250px;
   height: 250px;
   padding: 5px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.layout::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .box {
   background: lightgray;
   border: 1px solid black;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .l1 .header {
@@ -41,30 +56,21 @@ body {
   height: 40px;
   margin-bottom: 5px;
 }
-.l2 .main1 {
-  float: left;
-  width: 75px;
-  height: 150px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-.l2 .main2 {
-  float: left;
-  width: 75px;
-  height: 150px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
+.l2 .main1,
+.l2 .main2,
 .l2 .sidebar {
   float: left;
-  width: 75px;
+  width: 70px;
   height: 150px;
-  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.l2 .sidebar {
+  margin-right: 0;
 }
 .l2 .footer {
   clear: both;
   height: 40px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .l3 .circle {
@@ -74,31 +80,156 @@ body {
   float: left;
   margin-right: 5px;
 }
+
 .l3 .header {
   height: 40px;
-  margin-bottom: 5px;
   overflow: hidden;
+  margin-bottom: 5px;
 }
+
 .l3 .sidebar {
   float: left;
   width: 60px;
   height: 150px;
   margin-right: 5px;
 }
+
 .l3 .main {
+  float: left;
   height: 150px;
+  width: calc(100% - 65px);
   overflow: hidden;
 }
+
 .l3 .footer {
-  clear: both;
+  float: left;
   height: 40px;
+  width: calc(100% - 45px);
   margin-top: 5px;
-  margin-right: 45px;
 }
+
 .l3 .circle2 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   float: right;
-  margin-top: -40px;
+  margin-top: 5px;
+}
+body {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  padding: 5px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.layout::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box {
+  background: lightgray;
+  border: 1px solid black;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.l1 .header {
+  height: 40px;
+  margin-bottom: 5px;
+}
+.l1 .sidebar {
+  width: 60px;
+  height: 150px;
+  float: left;
+  margin-right: 5px;
+}
+.l1 .main {
+  height: 150px;
+  overflow: hidden;
+}
+.l1 .footer {
+  clear: both;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.l2 .header {
+  height: 40px;
+  margin-bottom: 5px;
+}
+.l2 .main1,
+.l2 .main2,
+.l2 .sidebar {
+  float: left;
+  width: 70px;
+  height: 150px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+.l2 .sidebar {
+  margin-right: 0;
+}
+.l2 .footer {
+  clear: both;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.l3 .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 5px;
+}
+
+.l3 .header {
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.l3 .sidebar {
+  float: left;
+  width: 60px;
+  height: 150px;
+  margin-right: 5px;
+}
+
+.l3 .main {
+  float: left;
+  height: 150px;
+  width: calc(100% - 65px);
+  overflow: hidden;
+}
+
+.l3 .footer {
+  float: left;
+  height: 40px;
+  width: calc(100% - 45px);
+  margin-top: 5px;
+}
+
+.l3 .circle2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: right;
+  margin-top: 5px;
 }
