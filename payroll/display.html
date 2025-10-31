@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Payroll Receipt</title>
+  <link rel="stylesheet" href="display.css">
+</head>
+<body>
+  <div class="receipt">
+    <h1>Payroll Receipt</h1>
+
+    <div class="info">
+      <p><strong>ID Number:</strong> <span id="idNumber">—</span></p>
+      <p><strong>Employee Name:</strong> <span id="employeeName">—</span></p>
+      <p><strong>Position:</strong> <span id="position">—</span></p>
+      <p><strong>Rate per Day:</strong> ₱<span id="rate">0.00</span></p>
+      <p><strong>Days Worked:</strong> <span id="days">0</span></p>
+    </div>
+
+    <hr>
+
+    <div class="deductions">
+      <p><span>Gross Pay:</span> <span>₱<span id="gross">0.00</span></span></p>
+      <p><span>SSS (5%):</span> <span>₱<span id="sss">0.00</span></span></p>
+      <p><span>Pag-ibig (3%):</span> <span>₱<span id="pagibig">0.00</span></span></p>
+      <p><span>PhilHealth (2%):</span> <span>₱<span id="philhealth">0.00</span></span></p>
+      <p><span>Tax (5%):</span> <span>₱<span id="tax">0.00</span></span></p>
+      <hr>
+      <p><strong>Total Deduction:</strong> <strong>₱<span id="totalDeduction">0.00</span></strong></p>
+    </div>
+
+    <div class="netpay">
+      <h2>Net Pay: ₱<span id="net">0.00</span></h2>
+    </div>
+
+    <button onclick="window.location.href='main.html'">← Back</button>
+  </div>
+
+  <script>
+    function fmt(n) {
+      if (typeof n !== 'number') n = Number(n) || 0;
+      return n.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    const data = JSON.parse(localStorage.getItem('payrollData'));
+
+    if (!data) {
+      document.getElementById('employeeName').textContent = 'No payroll data found';
+    } else {
+      const middle = data.middleName || data.middle || '';
+      const middleInitial = middle.trim().length ? (middle.trim().charAt(0).toUpperCase() + '.') : '';
+      const last = data.lastName || data.last || '';
+      const first = data.firstName || data.first || '';
+      const id = data.idNumber || data.id || '';
+      const position = data.position || '';
+      const rate = Number(data.rate ?? 0);
+      const days = Number(data.days ?? data.workdays ?? 0);
+      const gross = (typeof data.gross === 'number') ? data.gross : rate * days;
+      const sss = (typeof data.sss === 'number') ? data.sss : gross * 0.05;
+      const pagibig = (typeof data.pagibig === 'number') ? data.pagibig : gross * 0.03;
+      const philhealth = (typeof data.philhealth === 'number') ? data.philhealth : gross * 0.02;
+      const tax = (typeof data.tax === 'number') ? data.tax : gross * 0.05;
+      const totalDeduction = (typeof data.totalDeduction === 'number') ? data.totalDeduction : (sss + pagibig + philhealth + tax);
+      const net = (typeof data.net === 'number') ? data.net : (gross - totalDeduction);
+
+      document.getElementById('idNumber').textContent = id || '—';
+      document.getElementById('employeeName').textContent = `${last}${last ? ',' : ''} ${first} ${middleInitial}`.trim().replace(/\s+/g,' ');
+      document.getElementById('position').textContent = position || '—';
+      document.getElementById('rate').textContent = fmt(rate);
+      document.getElementById('days').textContent = isFinite(days) ? days : '0';
+      document.getElementById('gross').textContent = fmt(gross);
+      document.getElementById('sss').textContent = fmt(sss);
+      document.getElementById('pagibig').textContent = fmt(pagibig);
+      document.getElementById('philhealth').textContent = fmt(philhealth);
+      document.getElementById('tax').textContent = fmt(tax);
+      document.getElementById('totalDeduction').textContent = fmt(totalDeduction);
+      document.getElementById('net').textContent = fmt(net);
+    }
+  </script>
+</body>
+</html>

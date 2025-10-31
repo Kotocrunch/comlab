@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll - Main Page</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+ <div class="container">
+  <h1>Payroll System</h1>
+  <form id="payrollForm" onsubmit="saveData(event)">
+
+    <label>ID Number:</label>
+    <input type="text" id="idNumber" maxlength="15" oninput="formatID(this)" required>
+
+    <label>Last Name:</label>
+    <input type="text" id="lastName" onkeydown="return allowLettersOnly(event)" required>
+
+    <label>First Name:</label>
+    <input type="text" id="firstName" onkeydown="return allowLettersOnly(event)" required>
+
+    <label>Middle Name:</label>
+    <input type="text" id="middleName" onkeydown="return allowLettersOnly(event)" required>
+
+    <label>Position:</label>
+    <input type="text" id="position" onkeydown="return allowLettersOnly(event)" required>
+
+    <label>Rate:</label>
+    <input type="text" id="rate" onkeydown="return allowNumbersOnly(event)" required>
+
+    <label>Work Days:</label>
+    <input type="text" id="days" onkeydown="return allowNumbersOnly(event)" required>
+
+    <button type="submit">Compute Payroll</button>
+  </form>
+</div>
+
+<script>
+  function allowLettersOnly(event) {
+    const key = event.key;
+    return /^[a-zA-Z ]$/.test(key) || ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'].includes(key);
+  }
+  function allowNumbersOnly(event) {
+    const key = event.key;
+    return /^[0-9]$/.test(key) || ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'].includes(key);
+  }
+  function formatID(input) {
+    let value = input.value.replace(/\D/g, ''); 
+    if (value.length > 4) value = value.slice(0, 4) + '-' + value.slice(4);
+    if (value.length > 7) value = value.slice(0, 7) + '-' + value.slice(7);
+    if (value.length > 13) value = value.slice(0, 13); 
+    input.value = value;
+  }
+
+  function saveData(event) {
+    event.preventDefault();
+    alert("Form submitted successfully!");
+  }
+</script>
+
+
+<script>
+  function allowLettersOnly(event) {
+    const key = event.key;
+    return /^[a-zA-Z ]$/.test(key) || 
+      ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'].includes(key);
+  }
+
+  function allowNumbersOnly(event) {
+    const key = event.key;
+    return /^[0-9]$/.test(key) || 
+      ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'].includes(key);
+  }
+
+  function saveData(event) {
+    event.preventDefault();
+    alert("Form submitted successfully!");
+  }
+</script>
+
+
+  <script>
+    function saveData(e) {
+      e.preventDefault();
+      const idNumber = document.getElementById('idNumber').value;
+      const lastName = document.getElementById('lastName').value;
+      const firstName = document.getElementById('firstName').value;
+      const middleName = document.getElementById('middleName').value;
+      const position = document.getElementById('position').value;
+      const rate = parseFloat(document.getElementById('rate').value);
+      const days = parseFloat(document.getElementById('days').value);
+      const gross = rate * days;
+      const sss = gross * 0.05;
+      const pagibig = gross * 0.03;
+      const philhealth = gross * 0.02;
+      const tax = gross * 0.05;
+      const totalDeduction = sss + pagibig + philhealth + tax;
+      const net = gross - totalDeduction;
+
+      const data = {
+        idNumber, lastName, firstName, middleName, position, rate, days, gross, sss, pagibig, philhealth, tax, totalDeduction, net
+      };
+      localStorage.setItem('payrollData', JSON.stringify(data));
+      window.location.href = 'display.html';
+    }
+  </script>
+</body>
+</html>
