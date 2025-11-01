@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root{
+  --bg:#f3f4f6;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#374151;
+  --primary:#2b6cb0;
+  --success:#e6fffa;
+  --success-text:#065f46;
+  --error:#fff5f5;
+  --error-text:#7f1d1d;
+  --radius:10px;
+  --gap:14px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--accent);
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:48px 20px;
+}
+
+.container{
+  width:100%;
+  max-width:820px;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 6px 20px rgba(15,23,42,0.06);
+}
+
+h1{
+  font-size:20px;
+  margin:0 0 10px 0;
+  font-weight:600;
+  color:var(--accent);
+  text-align:center;
+}
+
+form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--gap);
+  margin:18px 0 26px 0;
+}
+
+form input{
+  padding:12px 14px;
+  border:1px solid #e6e7ea;
+  background:transparent;
+  border-radius:8px;
+  font-size:14px;
+  color:var(--accent);
+  outline:none;
+}
+
+form input::placeholder{color:var(--muted);font-weight:400}
+
+form .full{grid-column:1/-1}
+
+button{
+  padding:11px 14px;
+  border-radius:10px;
+  border:none;
+  background:var(--primary);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+
+button:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(43,108,176,0.12)}
+
+h2{
+  font-size:15px;
+  margin:8px 0 12px 0;
+  color:var(--accent);
+  font-weight:600;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  background:transparent;
+}
+
+th,td{
+  text-align:left;
+  padding:12px 10px;
+  border-bottom:1px solid #f1f2f4;
+  color:var(--accent);
+}
+
+th{font-size:13px;color:var(--muted);font-weight:600}
+
+tr:last-child td{border-bottom:0}
+
+.empty{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.success{
+  background:var(--success);
+  color:var(--success-text);
+  padding:10px 12px;
+  border-radius:8px;
+  margin-bottom:12px;
+  text-align:center;
+  font-weight:600;
+}
+
+.error{
+  background:var(--error);
+  color:var(--error-text);
+  padding:10px 12px;
+  border-radius:8px;
+  margin-bottom:12px;
+  text-align:center;
+  font-weight:600;
+}
+
+@media (max-width:640px){
+  form{grid-template-columns:1fr}
+  .container{padding:18px}
+  h1{font-size:18px}
+}
